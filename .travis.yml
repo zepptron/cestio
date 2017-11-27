@@ -3,15 +3,15 @@ services:
 - docker
 language: bash
 script:
-# prepare qemu
-- docker run --rm --privileged multiarch/qemu-user-static:register --reset
-# build image
-- docker build -t zepp/cestio .
-# push image
-- >
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-    docker login -u="$HUB_USER" -p="$HUB_PASS"
-    docker tag zepp/cestio zepp/cestio:latest
-    docker push zepp/cestio:$TAG
-    docker push zepp/cestop
-  fi
+  # prepare qemu
+  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+  # build image
+  - docker build -t zepp/cestio .
+  # push image
+  - >
+    if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+      docker login -u="$HUB_USER" -p="$HUB_PASS"
+      docker tag zepp/cestio zepp/cestio:latest
+      docker push zepp/cestio:$TAG
+      docker push zepp/cestop
+    fi
