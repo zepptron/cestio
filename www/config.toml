@@ -1,5 +1,5 @@
 baseURL = "http://cest.io"
 languageCode = "de-de"
 title = "cest.io"
-theme = "hugo-incorporated"
+theme = "casper"
 sectionPagesMenu = "main"
