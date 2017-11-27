@@ -1,7 +1,6 @@
 ---
 title: "Blogging like a Pr0!"
 date: 2017-11-24T16:38:52+01:00
-draft: true
 ---
 
 So you have your application running in the UCP Kubernetes Cluster. Nice. Here we'll show you how to measure your application with metrics. The following topics will be covered:
