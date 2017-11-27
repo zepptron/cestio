@@ -7,7 +7,7 @@ ENV HUGO_VERSION=0.31
 RUN apk update && \
 	rm -rf /var/cache/apk/*
 
-
+ADD www /www
 ADD binary/hugo /usr/local/bin/hugo
 WORKDIR /www/
 ENTRYPOINT ["hugo"]
