@@ -2,9 +2,9 @@ FROM hypriot/rpi-alpine-scratch
 
 MAINTAINER zepptron
 ENV HUGO_VERSION=0.31
- 
-# set alpine to version 3.2 instead of edge
-RUN apk update && \
+
+RUN apk update \
+    && apk upgrade \
 	rm -rf /var/cache/apk/*
 
 ADD www /www
