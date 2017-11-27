@@ -11,8 +11,7 @@ script:
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$HUB_USER" -p="$HUB_PASS"
-    TAG=$(grep "ENV HUGO_BUILD" Dockerfile | awk 'NF>1{print $NF}')
-    docker tag zepp/cestio zepp/cestio:$TAG
+    docker tag zepp/cestio zepp/cestio:latest
     docker push zepp/cestio:$TAG
     docker push zepp/cestop
   fi
