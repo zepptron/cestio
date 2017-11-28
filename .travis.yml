@@ -16,3 +16,6 @@ after_success:
     docker push $REPO:$TRAVIS_BUILD_NUMBER;
     fi 
   - docker push $REPO:$TAG
+
+notifications:
+  slack: tech-hort:g1JkIywmEMtB3Dvu4JwK1ueE
