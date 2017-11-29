@@ -18,7 +18,9 @@ after_success:
   - docker push $REPO:$TAG
 
 notifications:
-  slack: tech-hort:SPDnq642sujLV8S2mV34ONip
+  slack: 
+    rooms: 
+      - tech-hort:SPDnq642sujLV8S2mV34ONip#github
     template:
       - "%{repository} (%{commit}) : %{message} "
       - "Build details: %{build_url}"
