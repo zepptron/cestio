@@ -1,28 +1,25 @@
 sudo: required
 services:
-  - docker
+- docker
 language: bash
 script:
-  - export TAG=`if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then echo "latest"; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi`
-  - export REPO=zepp/cestio
-  # prepare qemu for ARMv7
-  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
-  - docker build -t $REPO:$TAG .
-
+- export TAG=`if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master"
+  ]]; then echo "latest"; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi`
+- export REPO=zepp/cestio
+- docker run --rm --privileged multiarch/qemu-user-static:register --reset
+- docker build -t $REPO:$TAG .
 after_success:
-  - docker login -u="$HUB_USER" -p="$HUB_PASS"
-  - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
-    docker tag $REPO:$TAG $REPO:$TRAVIS_BUILD_NUMBER;
-    docker push $REPO:$TRAVIS_BUILD_NUMBER;
-    fi 
-  - docker push $REPO:$TAG
-
+- docker login -u="$HUB_USER" -p="$HUB_PASS"
+- if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+  docker tag $REPO:$TAG $REPO:$TRAVIS_BUILD_NUMBER; docker push $REPO:$TRAVIS_BUILD_NUMBER;
+  fi
+- docker push $REPO:$TAG
 notifications:
-  slack: 
-    rooms: 
-      - tech-hort:SPDnq642sujLV8S2mV34ONip#github
+  slack:
+    rooms:
+      secure: 0jmn6Pbl2W/VkSr36d2c1Xbu3s5KrZYfxQ+xQ5D188lnaMPJy1w34Jnd7eIporgWiCbtARmASDKjPseFW5rjlWVgN5/HKnlKHAFAXzalD7TVvBC6omDNOJoiWEBPT/AiyflE2EDfE0lQnNdTIUC72x0hQ/uYZQ5iW4kj9LiOX4Jjst4F88rf25bSVplxPRZhEhg6hSTC+ffGLv8XG9i9ABeYZ6D54OJVUsQoMtm+qem118xjEGqVoaK2af4wsE4Sh8SxoTEZTLVqaP69Dy931y/minVxZ2D0yNJeaQJSNS0zMoc7eJVWsDo+lRuX1AxuKwTRV+foAx10C+SDOxjJbYEcKj5k7rs6UHCQpNPf7fUGjShX+r/lkipvSJpHu5KiufU3kTTC2jCyyAGdqqx2BAgZA4xbOa34Khiy/O9YK4anKB7vKMzKdUPtqXlOt5YOzoK24x4CorqybPOWWWBhuckpe5w28mUoAt1CqUyZbA2lW/9nTBxg1qQ5fAGM3T4d1lMcP+OlfSc67pIxQgtD/BOLeNJXnTztfSuMoq7q116xK2XeGZjCEs01eqrQ41ogLqQcSwC9JY1KhHZ7bsCcZhX0xLfKgWu/XdPNRI4B1EhPcReNeyalk5nkuy4VtRPr+fghzDIb9cbxh5I8V32sBoLELkXp/ED5EsyDNyyhAtU=
     template:
-      - "%{repository} (%{commit}) : %{message} "
-      - "Build number: %{build_number} - Commit message: %{commit_message}"
-      - "Runtime: %{elapsed_time}"
-      - "Build details: %{build_url}"
+    - "%{repository} (%{commit}) : %{message} "
+    - 'Build number: %{build_number} - Commit message: %{commit_message}'
+    - 'Runtime: %{elapsed_time}'
+    - 'Build details: %{build_url}'
