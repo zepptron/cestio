@@ -18,4 +18,11 @@ after_success:
   - docker push $REPO:$TAG
 
 notifications:
-  slack: $SLACK
+  slack: tech-hort:SPDnq642sujLV8S2mV34ONip
+    template:
+      - "%{repository} (%{commit}) : %{message} "
+      - "Build details: %{build_url}"
+      - "Build number: %{build_number}"
+      - "Commit message: %{commit_message}"
+      - "Runtime: %{elapsed_time}"
+      - "Result: %{result}"
