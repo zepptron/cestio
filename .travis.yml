@@ -23,8 +23,6 @@ notifications:
       - tech-hort:SPDnq642sujLV8S2mV34ONip#github
     template:
       - "%{repository} (%{commit}) : %{message} "
-      - "Build details: %{build_url}"
-      - "Build number: %{build_number}"
-      - "Commit message: %{commit_message}"
+      - "Build number: %{build_number} - Commit message: %{commit_message}"
       - "Runtime: %{elapsed_time}"
-      - "Result: %{result}"
+      - "Build details: %{build_url}"
