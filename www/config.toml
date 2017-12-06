@@ -1,5 +1,14 @@
 baseURL = "http://cest.io"
 languageCode = "de-de"
 title = "cest.io"
-theme = "casper"
-sectionPagesMenu = "main"
+disqusShortname = "cest-io"
+theme = "learn"
+paginate = 5
+
+[params]
+  ordersectionsby = "weight"
+  disableSearch = false
+  themeVariant = "mine"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
