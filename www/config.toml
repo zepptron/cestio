@@ -11,4 +11,15 @@ paginate = 5
   themeVariant = "mine"
 
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+  home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+  name = "<i class='fa fa-bullhorn'></i> Home"
+  url = "/"
+  weight = 2
+
+[[menu.shortcuts]] 
+  name = "<i class='fa fa-github'></i> Github repo"
+  identifier = "ds"
+  url = "https://github.com/zepptron"
+  weight = 3
