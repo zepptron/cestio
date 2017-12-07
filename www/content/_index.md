@@ -1,7 +1,8 @@
----
-title: "about"
-date: 2017-11-27T16:38:52+01:00
----
++++
+title = "about"
+date = 2017-11-27T16:38:52+01:00
+comments = false
++++
 
 Hi,
 and goodbye.

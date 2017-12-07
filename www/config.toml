@@ -2,7 +2,6 @@ baseURL = "http://cest.io"
 languageCode = "de-de"
 title = "cest.io"
 disqusShortname = "cest-io"
-theme = "learn"
 paginate = 5
 
 [params]
@@ -14,12 +13,13 @@ paginate = 5
   home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
-  name = "<i class='fa fa-bullhorn'></i> Home"
+  pre = "<h3>Navigation</h3>"
+  name = "<i class='fa fa-home'></i> About"
   url = "/"
-  weight = 2
+  weight = -3
 
 [[menu.shortcuts]] 
-  name = "<i class='fa fa-github'></i> Github repo"
+  name = "<i class='fa fa-github'></i> Github"
   identifier = "ds"
   url = "https://github.com/zepptron"
-  weight = 3
+  weight = -2
