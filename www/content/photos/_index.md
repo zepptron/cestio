@@ -1,5 +1,5 @@
 +++
-title = "photos"
+title = "Photos"
 chapter = true
 weight = 3
 comments = false

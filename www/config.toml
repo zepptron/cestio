@@ -8,18 +8,24 @@ paginate = 5
   ordersectionsby = "weight"
   disableSearch = false
   themeVariant = "mine"
+  editURL = "https://github.com/zepptron/cestio/tree/master/www/content/"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON"]
 
-[[menu.shortcuts]]
-  pre = "<h3>Navigation</h3>"
-  name = "<i class='fa fa-home'></i> About"
-  url = "/"
-  weight = -3
-
 [[menu.shortcuts]] 
+  pre = "<h3>Other</h3>"
   name = "<i class='fa fa-github'></i> Github"
-  identifier = "ds"
   url = "https://github.com/zepptron"
   weight = -2
+
+[[menu.shortcuts]] 
+  name = "<i class='fa fa-spotify'></i> Spotify"
+  url = "https://open.spotify.com/user/recyco"
+  weight = -2
+
+[[menu.shortcuts]] 
+  name = "<i class='fa fa-slack'></i> Slack"
+  url = "/slack"
+  weight = -2
+

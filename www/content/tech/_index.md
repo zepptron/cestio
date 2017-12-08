@@ -1,5 +1,5 @@
 +++
-title = "technology"
+title = "Technology"
 chapter = true
 weight = 2
 comments = false

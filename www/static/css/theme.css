@@ -992,7 +992,7 @@ td {
 #top-github-link {
     position: relative;
     z-index: 1;
-    float: right;
+    float: left;
     display: block;
 }
 #body #breadcrumbs {

@@ -37,59 +37,68 @@
   </head>
   <body class="" data-url="{{ .RelPermalink }}">
     {{ partial "menu.html" . }}
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              {{if not .IsHome}}
-              <div>
-                <div id="top-bar">
+    <section id="body">
+      <!-- start grey top header bar -->
+      <div id="top-bar">
+        <div id="top-github-link">
+          <table style="border-style: none;">
+            <tr style="border-style: none;">
+              <td style="border-style: none;">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu">
+                  <i class="fa fa-file-text-o"></i>
+                </span>
+                <span class="links">
+                  {{ template "breadcrumb" dict "page" . "value" .Title }}
+                </span>
+              </td>
+              <td style="border-style: none;">
+                <span id="toc-menu"></span>
+                <span>
+                  <time>
+                    {{ with .Site.Params.dateFormat }}
+                      {{ $.Date.Format . }}
+                    {{ else }}
+                      {{ .Date.Format "2. Jan 2006, 15:04" }}
+                    {{ end }}
+                  </time>
+                </span>
+              </td>
+              <td style="border-style: none;">
+                <span id="toc-menu"></span>
                 {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
-                  <div id="top-github-link">
-                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fa fa-code-fork"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
-                    </a>
-                  </div>
+                <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+                <i class="fa fa-code-fork"></i>
+                </a>        
                   {{ end }}
                 {{ end }}
-                {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fa fa-bars"></i>
-                        </a>
-                    </span>
-                  {{ if $toc }}
-                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
-                  {{ end }}
-                  <span class="links">
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}   
-                  </span>
-                </div>
-                {{ if $toc }}
-                    {{ partial "toc.html" . }}
-                {{ end }}
-              </div>
-            </div>
-            {{ end }}
-
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- end top navi bar -->
+      <div class="padding highlightable">
         {{ if .Params.chapter }}
-          <div id="chapter">
-        {{ end }}
-        <div id="body-inner">
-          {{if and (not .IsHome) (not .Params.chapter) }}
+        <div id="chapter">
+          {{ end }}
+          <div id="body-inner">
+            {{if and (not .IsHome) (not .Params.chapter) }}
             <h1>{{.Title}}</h1>
-          {{end}}
-
-        {{define "breadcrumb"}}
-          {{$parent := .page.Parent }}
-          {{ if $parent }}
-            {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
-            {{ template "breadcrumb" dict "page" $parent "value" $value }} 
-          {{else}}
-            {{.value|safeHTML}}
-          {{end}}
-        {{end}}
+            {{end}}
+            {{define "breadcrumb"}}
+              {{$parent := .page.Parent }}
+              {{ if $parent }}
+                {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
+                {{ template "breadcrumb" dict "page" $parent "value" $value }}
+              {{else}}
+                {{.value|safeHTML}}
+              {{end}}
+            {{end}} 
