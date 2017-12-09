@@ -1,7 +1,6 @@
 baseURL = "http://cest.io"
 languageCode = "de-de"
 title = "cest.io"
-disqusShortname = "cest-io"
 paginate = 5
 
 [params]
@@ -26,6 +25,6 @@ paginate = 5
 
 [[menu.shortcuts]] 
   name = "<i class='fa fa-slack'></i> Slack"
-  url = "/slack"
+  url = "http://cest.io/slack/"
   weight = -2
 
