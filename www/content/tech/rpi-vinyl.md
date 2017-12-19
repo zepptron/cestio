@@ -1,7 +1,7 @@
 ---
 title: "Vinyl and Raspberry Pi"
 date: 2017-11-24T16:38:52+01:00
-weight: 3
+weight: 2
 ---
 
 Since vinyl is getting bigger and bigger these days and lots of people have some old players somewhere in their cellar it might be usefull to read the following lines in order to upgrade it to something thats fits for the 21st century. Most of the time the "new generation players" don't have the quality you'd expect when you compare them to some old models. You might also want to place your vinylplayer somewhere in the corner of your room and not next to your TV just to be able to plug it into your amplifier via the short cable. 

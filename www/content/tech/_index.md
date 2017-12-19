@@ -9,4 +9,4 @@ comments = false
 
 # Basics
 
-Index of posts yoo
+Linux related stuff I need to store somewhere
