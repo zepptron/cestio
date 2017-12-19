@@ -73,12 +73,7 @@ b, strong, label, th {
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-#grav-logo {
-    max-width: 60%;
-}
-#grav-logo path {
-    fill: #fff !important;
-}
+
 #sidebar {
     font-weight: 300 !important;
 }
@@ -626,8 +621,8 @@ code {
     border-radius: 2px;
     white-space: nowrap;
     color: #5e5e5e;
-    background: #FFF7DD;
-    border: 1px solid #fbf0cb;
+    background: #f2f2f2;
+    border: 1px solid #dddddd;
     padding: 0px 2px;
 }
 code + .copy-to-clipboard {
@@ -1049,36 +1044,31 @@ td {
     }
 }
 .copy-to-clipboard {
-    background-image: url(../images/clippy.svg);
+    background-image: url(../images/copy.png);
     background-position: 50% 50%;
-    background-size: 16px 16px;
+    background-size: 13px 13px;
     background-repeat: no-repeat;
     width: 27px;
     height: 1.45rem;
-    top: -1px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: #5e5e5e;
-    background-color: #FFF7DD;
-    margin-left: -.2rem;
     cursor: pointer;
-    border-radius: 0 2px 2px 0;
     margin-bottom: 1px;
 }
+
 .copy-to-clipboard:hover {
-    background-color: #E8E2CD;
+    background-color: #eaeaea;
 }
 pre .copy-to-clipboard {
     position: absolute;
     right: 4px;
     top: 4px;
-    background-color: #4d5257;
-    color: #ccc;
-    border-radius: 2px;
+    background-color: #d8d8d8;
+    color: #e0e0e0;
 }
 pre .copy-to-clipboard:hover {
-    background-color: #656c72;
+    background-color: #eaeaea;
     color: #fff;
 }
 .parent-element {
