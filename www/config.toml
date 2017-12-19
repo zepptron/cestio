@@ -25,6 +25,6 @@ paginate = 5
 
 [[menu.shortcuts]] 
   name = "<i class='fa fa-slack'></i> Slack"
-  url = "http://cest.io/slack"
+  url = "http://slack.cest.io"
   weight = -2
 
