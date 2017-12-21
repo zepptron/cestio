@@ -47,7 +47,7 @@ graph LR;
 If your vinylplayer got an old DIN-connector, cut it and replace it with [cinch](https://www.amazon.de/Goobay-Cinchstecker-schwarz-high-quality/dp/B000L0ZO78/ref=sr_1_4?ie=UTF8&qid=1509494006&sr=8-4&keywords=cinch+stecker). Or buy the corresponding converter for 5$.
 Now connect your vinyl player to the preamp, the preamp to the audio IN on the usb soundcard and then from the usb audiodevice (Out) to the raspberry. Straight forward, you can't do much wrong here.
 
-![wired](/img/rpi/vinyl0r-wired.jpg)
+![wired](/images/img/rpi/vinyl0r-wired.jpg?classes=border&width=500px)
 
 ### Setting up the Raspberry
 Install Raspbian on your Raspberry and configure SSH so you can access it. It's also better to use a static IP or a DNS name that doesn't change because you want to access it with via URL later. I won't cover these basics here, please [check the internet](http://lmgtfy.com/?q=setting+up+raspberry+static+ip) for your type of Raspberry. 
