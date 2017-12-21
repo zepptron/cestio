@@ -12,6 +12,8 @@ What I'm going to show you is pretty straigt forward:
 - integrate vinylplayer to your wlan via Raspberry Pi (place it anywhere)
 - expose your vinyl to your (local) network, join stream with different devices
 
+Check out my gitrepo for further info: [zepptron/vinyl0r](https://github.com/zepptron/vinyl0r)
+
 Enough introduction, lets start with the hardware.
 
 ### Getting stuff together
@@ -30,7 +32,7 @@ Unfortunately the Raspberry Pi has no Audio Input right now and I believe this f
 
 I've had some bad experiences with the soundquality of low budged preamps but others tell me that I'm stupid and there is no difference. You better check that on your own. Maybe I can hear the money I've spend...
 
-### Connect everything!
+### Connect all the things!!
 
 So what we'll build is basically this:
 
@@ -44,6 +46,8 @@ graph LR;
 
 If your vinylplayer got an old DIN-connector, cut it and replace it with [cinch](https://www.amazon.de/Goobay-Cinchstecker-schwarz-high-quality/dp/B000L0ZO78/ref=sr_1_4?ie=UTF8&qid=1509494006&sr=8-4&keywords=cinch+stecker). Or buy the corresponding converter for 5$.
 Now connect your vinyl player to the preamp, the preamp to the audio IN on the usb soundcard and then from the usb audiodevice (Out) to the raspberry. Straight forward, you can't do much wrong here.
+
+![wired](/img/rpi/vinyl0r-wired.jpg)
 
 ### Setting up the Raspberry
 Install Raspbian on your Raspberry and configure SSH so you can access it. It's also better to use a static IP or a DNS name that doesn't change because you want to access it with via URL later. I won't cover these basics here, please [check the internet](http://lmgtfy.com/?q=setting+up+raspberry+static+ip) for your type of Raspberry. 

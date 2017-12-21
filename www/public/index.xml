@@ -2,88 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>about on cest.io</title>
-    <link>http://cest.io/</link>
+    <link>https://cest.io/</link>
     <description>Recent content in about on cest.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <lastBuildDate>Mon, 27 Nov 2017 16:38:52 +0100</lastBuildDate>
     
-	<atom:link href="http://cest.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cest.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Prometheus: How to</title>
-      <link>http://cest.io/tech/xxxx/</link>
-      <pubDate>Fri, 24 Nov 2017 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/tech/xxxx/</guid>
-      <description>So you have your application running in the UCP Kubernetes Cluster. Nice. Here we&amp;rsquo;ll show you how to measure your application with metrics. The following topics will be covered:
- generate metrics expose/push metrics what does it look like? collect metrics visualize metrics installing prometheus locally follow up  Generate metrics If you want to generate metrics it belongs to you and your favorite programming language how to do this. At the end there must be a label and a value that will be collected by Prometheus.</description>
-    </item>
     
     <item>
       <title>Prometheus: Docker metrics</title>
-      <link>http://cest.io/tech/paylord/</link>
+      <link>https://cest.io/tech/rpi-socat/</link>
       <pubDate>Fri, 10 Nov 2017 16:38:52 +0100</pubDate>
       
-      <guid>http://cest.io/tech/paylord/</guid>
+      <guid>https://cest.io/tech/rpi-socat/</guid>
       <description>Socat for Docker Swarm on Raspberry Pi
 You&amp;rsquo;ll need this if you‘d like to get the metrics of the docker daemon into prometheus. Since every docker installation has it&amp;rsquo;s own metrics you&amp;rsquo;ll need something small between your running daemon and prometheus to differentiate and not only get the ones from the hostmachine where prometheus is actually running.
 Thats what we want to achieve: graph LR; A[Prometheus]--|TCP listen| B(socat#1) A[Prometheus]--|TCP listen| C(socat#2) A[Prometheus]--|TCP listen| D(socat#n) B -- |Output| F[DockerD#1] C -- |Output| G[DockerD#2] D -- |Output| H[DockerD#n]  Prerequisites: Please take care that you have the correct docker_gwbridge IP in use if you&amp;rsquo;re about to use it in the docker daemon/prometheus context.</description>
     </item>
     
     <item>
-      <title>faav</title>
-      <link>http://cest.io/tech/xxxxx/</link>
+      <title>Vinyl and Raspberry Pi</title>
+      <link>https://cest.io/tech/rpi-vinyl/</link>
       <pubDate>Fri, 24 Nov 2017 16:38:52 +0100</pubDate>
       
-      <guid>http://cest.io/tech/xxxxx/</guid>
-      <description>tree</description>
-    </item>
-    
-    <item>
-      <title>faiv</title>
-      <link>http://cest.io/tech/brrr/</link>
-      <pubDate>Mon, 27 Nov 2017 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/tech/brrr/</guid>
-      <description>no. 5</description>
-    </item>
-    
-    <item>
-      <title>sixe</title>
-      <link>http://cest.io/tech/groar/</link>
-      <pubDate>Thu, 10 Nov 2016 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/tech/groar/</guid>
-      <description>no. 6</description>
-    </item>
-    
-    <item>
-      <title>seven</title>
-      <link>http://cest.io/tech/grrr/</link>
-      <pubDate>Tue, 10 Nov 2015 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/tech/grrr/</guid>
-      <description>no. 7</description>
-    </item>
-    
-    <item>
-      <title>unten</title>
-      <link>http://cest.io/photos/unten/</link>
-      <pubDate>Wed, 06 Dec 2017 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/photos/unten/</guid>
-      <description>untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten untenuntenuntenuntenuntenuntenunten</description>
-    </item>
-    
-    <item>
-      <title>aaa</title>
-      <link>http://cest.io/photos/oben/</link>
-      <pubDate>Tue, 05 Dec 2017 16:38:52 +0100</pubDate>
-      
-      <guid>http://cest.io/photos/oben/</guid>
-      <description>fotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofotofoto fotofotofoto</description>
+      <guid>https://cest.io/tech/rpi-vinyl/</guid>
+      <description>Since vinyl is getting bigger and bigger these days and lots of people have some old players somewhere in their cellar it might be usefull to read the following lines in order to upgrade it to something thats fits for the 21st century. Most of the time the &amp;ldquo;new generation players&amp;rdquo; don&amp;rsquo;t have the quality you&amp;rsquo;d expect when you compare them to some old models. You might also want to place your vinylplayer somewhere in the corner of your room and not next to your TV just to be able to plug it into your amplifier via the short cable.</description>
     </item>
     
   </channel>
