@@ -1,6 +1,6 @@
 ---
-title: "Updating DynDNS Service with your Raspberry"
-date: 2018-05-01T23:38:52+01:00
+title: "Multiupdate DynDNS Service"
+date: 2018-01-05T23:38:52+01:00
 weight: 1
 ---
 
@@ -60,3 +60,5 @@ services:
       restart_policy:
         condition: on-failure
 ```
+
+cheers.
